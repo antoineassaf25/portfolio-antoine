@@ -13,6 +13,56 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: inline-flex;
+  align-items: center;
+
+  background: rgba(20, 20, 60, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+
+  border-radius: 9999px;
+
+  padding: 12px 30px;
+
+  overflow: hidden;
+}
+
+
+/* glass gradient */
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.15)
+  );
+
+  pointer-events: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  font-weight: 600;
+  font-size: x-large;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -22,11 +72,15 @@ a:hover {
   color: #535bf2;
 }
 
+
 body {
   margin: 0;
   min-height: 100vh;
 
-  background: linear-gradient(
+  background:
+  url("./assets/glass-pattern.png") repeat,
+  linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,0.5)),
+  linear-gradient(
     to right,
     #1c1357,
     #271b7b,
@@ -34,6 +88,13 @@ body {
     #271b7b,
     #1c1357
   );
+
+  background-repeat: repeat-y, no-repeat;
+  background-size: 100vw auto, cover;
+  background-position: top center, center;
+  background-attachment: scroll, scroll;
+
+  background-blend-mode: multiply;
 }
 
 h1 {
