@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #535353;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,10 +24,16 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+
+  background: linear-gradient(
+    to right,
+    #1c1357,
+    #271b7b,
+    #271b7b,
+    #271b7b,
+    #1c1357
+  );
 }
 
 h1 {
@@ -65,4 +71,8 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
