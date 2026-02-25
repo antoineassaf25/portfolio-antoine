@@ -89,7 +89,7 @@ body {
     );
   
     z-index: 0;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: black;
 }
 
@@ -145,6 +145,51 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.primary-button {
+  padding: 14px 28px;
+  font-size: 30px;
+  font-weight: 400;
+
+  background-color: #0f172a;
+  color: white;
+
+  border: none;
+  border-radius: 999px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  box-shadow: 0 8px 30px rgb(0, 0, 0);
+}
+
+.primary-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.icon-button {
+  height: 65px;
+  aspect-ratio: 1 / 1;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 999px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  box-shadow: 0 2px 15px rgb(0, 0, 0, .5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.icon-button:hover {
+  background-color: white;
+  transform: translateY(-2px);
 }
 
 @media (prefers-color-scheme: light) {
