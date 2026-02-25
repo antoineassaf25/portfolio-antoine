@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .navbar {
   position: fixed;
   top: 20px;
@@ -73,47 +74,23 @@ a:hover {
 }
 
 
-/* body {
-  margin: 0;
-  min-height: 100vh;
-
-  background:
-  url("./assets/glass-pattern.png") repeat,
-  linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,0.5)),
-  linear-gradient(
-    to right,
-    #1c1357,
-    #271b7b,
-    #271b7b,
-    #271b7b,
-    #1c1357
-  );
-
-  background-repeat: repeat-y, no-repeat;
-  background-size: 100vw auto, cover;
-  background-position: top center, center;
-  background-attachment: scroll, scroll;
-
-  background-blend-mode: multiply;
-} */
-
 body {
   margin: 0;
   min-height: 100vh;
   position: relative;
 
   background:
-    linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,0.5)),
     linear-gradient(
       to right,
-      #1c1357,
-      #271b7b,
-      #271b7b,
-      #271b7b,
-      #1c1357
+      rgb(195, 210, 255) 0%,
+      rgb(255, 255, 255) 40%,
+      rgb(255, 255, 255) 60%,
+      rgb(195, 210, 255) 100%
     );
   
-  z-index: 0;
+    z-index: 0;
+    font-family: "Space Grotesk", sans-serif;
+    color: black;
 }
 
 body::before {
@@ -124,33 +101,26 @@ body::before {
 
   z-index: -1;
 
-  background: url("./assets/glass-pattern.png") repeat-y top center;
+  background: url("./assets/bg-pattern.png") repeat-y top center;
   background-size: 100vw auto;
 
-  mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(
+  to right,
+  rgba(0, 0, 0, .2) 0%,
+  rgba(0, 0, 0, 0) 20%,
+  rgba(0, 0, 0, 0) 80%,
+  rgba(0, 0, 0, .2) 100%
+  );
 
   mask-image: linear-gradient(
     to right,
-    black 0%,
-    black 25%,
-    rgba(0,0,0,0.6) 40%,
-    transparent 50%,
-    rgba(0,0,0,0.6) 60%,
-    black 75%,
-    black 100%
+    rgba(0, 0, 0, .2) 0%,
+  rgba(0, 0, 0, 0) 20%,
+  rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, .2) 100%
   );
 
-
-  -webkit-mask-image: linear-gradient(
-    to right,
-    black 0%,
-    black 25%,
-    rgba(0,0,0,0.6) 30%,
-    transparent 50%,
-    rgba(0,0,0,0.6) 70%,
-    black 75%,
-    black 100%
-  );
+  mix-blend-mode:luminosity;
 }
 
 h1 {
@@ -192,4 +162,49 @@ button:focus-visible {
 
 html {
   scroll-behavior: smooth;
+}
+
+.fullscreen-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;  
+  flex-direction: column;
+  padding-top: 120px;
+}
+
+.headshot {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  outline-width: 8px;
+  outline-style: solid;
+  outline-color: #1a1a1a80;
+  box-shadow: 0 8px 30px rgb(0, 0, 0);
+}
+
+.about-title{
+  margin: 0 0 24px 0;
+  font-size: 56px;
+  font-weight: 800;
+}
+
+.about-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.about-text{
+  margin: 0;
+  max-width: 700px;
+  font-size: 40px;
+  line-height: 1.5;
+  font-weight: 600;
 }
