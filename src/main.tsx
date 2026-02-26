@@ -5,6 +5,7 @@ import NavBar from './components/NavBar.tsx'
 import HomeSection from './components/HomeSection.tsx'
 import About from './components/About.tsx'
 import Projects from './components/Projects.tsx'
+import Skills from './components/Skills.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -14,9 +15,7 @@ createRoot(document.getElementById('root')!).render(
       <HomeSection/>
       <About/>
       <Projects/>
-      <section id="skills" style={{ height: "100vh" }}>
-        <h1>Skills</h1>
-      </section>
+      <Skills/>
       <section id="experience" style={{ height: "100vh" }}>
         <h1>Experience</h1>
       </section>
