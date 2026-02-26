@@ -16,7 +16,7 @@ const SKILLS: string[] = [
 ]
 
 export default function() {
-    return (<section id="skills" className="fullscreen-section" style={{ height: "100vh" }}>
+    return (<section id="skills" className="fullscreen-section">
         <h1>Skills</h1>
         <div style={{
                     width: "1500px",

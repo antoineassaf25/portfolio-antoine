@@ -6,7 +6,9 @@ import HomeSection from './components/HomeSection.tsx'
 import About from './components/About.tsx'
 import Projects from './components/Projects.tsx'
 import Skills from './components/Skills.tsx'
-
+import Experience from './components/Experience.tsx'
+import Contact from './components/Contact.tsx'
+import Footer from './components/Footer.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -16,13 +18,9 @@ createRoot(document.getElementById('root')!).render(
       <About/>
       <Projects/>
       <Skills/>
-      <section id="experience" style={{ height: "100vh" }}>
-        <h1>Experience</h1>
-      </section>
-
-      <section id="contact" style={{ height: "100vh" }}>
-        <h1>Contact</h1>
-      </section>
+      <Experience/>
+      <Contact/>
+      <Footer/>
     </main>
   </StrictMode>,
 )
