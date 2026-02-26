@@ -293,8 +293,8 @@ html {
 }
 
 .project-element{
-  width: 1000px;
-  height: 500px;
+  width: 1100px;
+  height: 450px;
 
   background: linear-gradient(
     to right,
@@ -307,11 +307,12 @@ html {
 
   box-shadow: 0 2px 15px rgb(0, 0, 0, .5);
 
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 80px;
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   transform: scale(.99);
   transition: all 0.2s ease;
@@ -336,10 +337,11 @@ html {
   border-radius: 40px;
 
   transition: transform 0.3s ease;
+  transform: rotate(1deg);
 }
 
 .project-element:hover .project-image {
-  transform: scale(1.08) rotate(2deg) translateX(-10px);
+  transform: scale(1.08) rotate(2deg) ;
 }
 
 .project-info {
@@ -348,6 +350,40 @@ html {
   align-items: flex-start;
   flex-direction: column; 
 
+  height: 100%;
+
   text-align: left;
-  padding: 30px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.project-skill {
+  background: rgba(20, 20, 60, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  color: white;
+  border-radius: 9999px;
+  font-size: 20px;
+
+  display: inline-block;
+  padding: 5px 12px;
+  margin: 6px 8px 6px 0;
+}
+
+.project-row {
+  display: flex;
+}
+
+.project-element:nth-child(even) .project-row {
+  flex-direction: row-reverse;
+}
+
+.project-element:nth-child(even){
+  transform: translateX(50px);
+}
+
+.project-element:nth-child(odd){
+  transform: translateX(-50px);
 }
