@@ -18,7 +18,7 @@
   position: fixed;
   top: 20px;
   left: 50%;
-  
+
   transform: translateX(-50%) scale(.98);
   transition: all 0.2s ease;
 
@@ -290,4 +290,64 @@ html {
 .about-graphic{
   width: 600px;
   height: 600px
+}
+
+.project-element{
+  width: 1000px;
+  height: 500px;
+
+  background: linear-gradient(
+    to right,
+    rgb(235, 235, 235, .2) 0%,
+    rgba(197, 255, 200, 0.2) 100%
+  );
+
+  border: none;
+  border-radius: 20px;
+
+  box-shadow: 0 2px 15px rgb(0, 0, 0, .5);
+
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: scale(.99);
+  transition: all 0.2s ease;
+
+  overflow: hidden;
+}
+
+.project-element:hover{
+  transform: scale(1);
+  background: linear-gradient(
+    to right,
+    rgba(191, 191, 191, 0.2) 0%,
+    rgba(155, 200, 157, 0.2) 100%
+  );  
+}
+
+.project-image {
+  width: 400px;
+  height: 250px;
+  box-shadow: 0 2px 15px rgb(0, 0, 0, .3);
+  border: none;
+  border-radius: 40px;
+
+  transition: transform 0.3s ease;
+}
+
+.project-element:hover .project-image {
+  transform: scale(1.08) rotate(2deg) translateX(-10px);
+}
+
+.project-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column; 
+
+  text-align: left;
+  padding: 30px;
 }

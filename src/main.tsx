@@ -4,6 +4,7 @@ import './index.css'
 import NavBar from './components/NavBar.tsx'
 import HomeSection from './components/HomeSection.tsx'
 import About from './components/About.tsx'
+import Projects from './components/Projects.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -12,9 +13,7 @@ createRoot(document.getElementById('root')!).render(
     <main style={{ paddingTop: "100px" }}>
       <HomeSection/>
       <About/>
-      <section id="projects" style={{ height: "100vh" }}>
-        <h1>Projects</h1>
-      </section>
+      <Projects/>
       <section id="skills" style={{ height: "100vh" }}>
         <h1>Skills</h1>
       </section>
