@@ -32,7 +32,7 @@ export default function Experience() {
           imagePath='drift.webp'
         />
 
-        <TimelineItem
+        {/* <TimelineItem
           title="Teaching Assistant"
           company="Northeastern University"
           period="Jan 2024 – Apr 2025"
@@ -40,6 +40,29 @@ export default function Experience() {
           achievements={[
             "Created dynamic programming & graph-based problems",
             "Mentored students on algorithmic optimization"
+          ]}
+          imagePath='northeastern.png'
+        /> */}
+
+        <TimelineItem
+          title="MS in Computer Science"
+          company="Georgia Institute of Technology"
+          period="Aug 2025 – May 2027"
+          description=""
+          achievements={[
+            "GPA: 4.00",
+          ]}
+          imagePath='gt.png'
+        />
+
+        <TimelineItem
+          title="BS in Computer Science and Mathematics"
+          company="Northeastern University"
+          period="Aug 2021 – May 2025"
+          description=""
+          achievements={[
+            "GPA: 3.96",
+            "Honors College",
           ]}
           imagePath='northeastern.png'
         />

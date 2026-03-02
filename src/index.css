@@ -419,50 +419,128 @@ html {
 .timeline::before {
   content: "";
   position: absolute;
-  left: 20px;
+  left: -14px;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: #d0d3e2;
+  width: 6px;
+  background: linear-gradient(
+    to bottom,
+    #7054ee66 0%,
+    #7054ee00 100%
+  );
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.245);
 }
 
 .timeline-item {
   position: relative;
-  padding-left: 60px;
-  margin-bottom: 60px;
+  padding-left: 100px;
+  margin-bottom: 100px;
 }
 
 .timeline-marker {
   position: absolute;
-  left: 11px;
+  left: -50px;
   top: 8px;
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: white;
+
+  object-fit: cover;
+  outline-width: 8px;
+  outline-style: solid;
+  outline-color: #7054ee;
+  box-shadow: 0 6px 20px rgb(0, 0, 0, .25);
 }
 
-.timeline-content h3 {
-  margin: 0;
-  font-size: 1.2rem;
+.timeline-content p { margin: 0; }
+
+.timeline-content {
+  width: 800px;
+
+  background: linear-gradient(
+    135deg,
+    rgb(235, 235, 235, .2) 0%,
+    rgba(239, 197, 255, 0.2) 100%
+  );
+
+  border: none;
+  border-radius: 40px;
+
+  box-shadow: 0 2px 15px rgb(0, 0, 0, .5);
+
+  padding: 40px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+  transform: scale(.99);
+  transition: all 0.2s ease;
+
+  overflow: hidden;
 }
 
-.timeline-content h4 {
-  margin: 4px 0;
+.timeline-content:hover{
+  transform: scale(1);
+  background: linear-gradient(
+    to right,
+    rgba(197, 197, 197, 0.2) 0%,
+    rgba(190, 150, 206, 0.2) 100%
+  );  
+}
+
+.timeline-company {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.timeline-title {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.timeline-period {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.65;
+  margin-bottom: 20px;
+}
+
+.timeline-summary {
+  font-size: 22px;
   font-weight: 500;
-  opacity: 0.8;
+  border-left: 3px solid #7054ee;
+  padding-left: 14px;
+  margin: 18px 0 10px;
+  text-align: left;
 }
 
-.period {
-  font-size: 0.85rem;
-  opacity: 0.6;
+.timeline-achievements {
+  margin: 0;
+  padding-left: 22px;
+  margin-top: 18px;
+  font-size: 24px;
+  line-height: 1.35;
+  text-align: left;
 }
 
-.timeline-content p {
-  margin-top: 12px;
+.timeline-achievements li {
+  margin: 8px 0;
+  line-height: 1.45;
+}
+
+.timeline-marker {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .footer {

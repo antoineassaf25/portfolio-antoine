@@ -10,15 +10,16 @@ type TimelineItemProps = {
 export default function TimelineItem({ title, company, period, description, achievements, imagePath }: TimelineItemProps) {
   return (
     <div className="timeline-item">
-      <div className="timeline-marker" style={{backgroundImage: `url(/assets/${imagePath})`}}/>
+      <div
+        className="timeline-marker"
+        style={{ backgroundImage: `url(/assets/${imagePath})` }}
+      />
       <div className="timeline-content">
-        <h3>{title}</h3>
-        <h4>{company}</h4>
-        <span className="period">{period}</span>
+        <p className="timeline-company">{company}</p>
+        <p className="timeline-title">{title}</p>
+        <p className="timeline-period">{period}</p>
 
-        <p>{description}</p>
-
-        <ul>
+        <ul className="timeline-achievements">
           {achievements.map((a, i) => (
             <li key={i}>{a}</li>
           ))}
