@@ -365,6 +365,8 @@ html {
 .project-info{
   flex: 1 1 420px;
   min-width: 0;
+  text-align: left;
+  padding: 30px;
 }
 
 
