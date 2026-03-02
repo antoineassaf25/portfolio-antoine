@@ -4,12 +4,13 @@ type TimelineItemProps = {
   period: string;
   description: string;
   achievements: string[];
+  imagePath: string;
 };
 
-export default function TimelineItem({ title, company, period, description, achievements }: TimelineItemProps) {
+export default function TimelineItem({ title, company, period, description, achievements, imagePath }: TimelineItemProps) {
   return (
     <div className="timeline-item">
-      <div className="timeline-marker" />
+      <div className="timeline-marker" style={{backgroundImage: `url(/assets/${imagePath})`}}/>
       <div className="timeline-content">
         <h3>{title}</h3>
         <h4>{company}</h4>

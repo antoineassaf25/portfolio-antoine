@@ -7,7 +7,7 @@ export default function Experience() {
 
       <div className="timeline">
         <TimelineItem
-          title="Software Engineer Co-op"
+          title="Software/DevOps Engineer Co-op"
           company="Wolters Kluwer"
           period="Jul 2024 – Dec 2024"
           description="Optimized backend services powering clinical software across 150+ hospitals."
@@ -16,6 +16,7 @@ export default function Experience() {
             "Automated CI/CD for 50+ services (40% fewer rollbacks)",
             "Integrated JUnit regression testing into production workflows"
           ]}
+          imagePath='wolterskluwer.jpeg'
         />
 
         <TimelineItem
@@ -28,6 +29,7 @@ export default function Experience() {
             "Designed abstractions over 10+ REST APIs",
             "Implemented CI automation for trunk-based development"
           ]}
+          imagePath='drift.webp'
         />
 
         <TimelineItem
@@ -39,6 +41,7 @@ export default function Experience() {
             "Created dynamic programming & graph-based problems",
             "Mentored students on algorithmic optimization"
           ]}
+          imagePath='northeastern.png'
         />
       </div>
     </section>
