@@ -3,9 +3,9 @@ const EMAIL = "antoineassaf25@gmail.com";
 export default function Contact() {
   return (
     <section id="contact" className="fullscreen-section">
-      <h1>Contact</h1>
+      <h1 className="divider">Contact</h1>
 
-      <p style={{ fontSize: "30px", marginTop: "20px" }}>
+      <p style={{ fontSize: "26px", marginTop: "20px" }}>
         Please contact me directly at{" "}
         <a
           href={`mailto:${EMAIL}`}

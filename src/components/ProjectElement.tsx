@@ -20,25 +20,25 @@ export function ProjectElement({ content } : ProjectElementProps) {
             <div className="project-row">
                 <div className ="project-info">
                     <div>
-                        <h1 style={{fontSize: "40px", fontWeight: "700"}}> {content.title} </h1>
+                        <h1 style={{fontSize: "34px", fontWeight: "700"}}> {content.title} </h1>
                         <a
                         href={content.projectLink1}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{fontSize: "25px" , fontWeight: "500", marginRight: "20px"}}
+                        style={{fontSize: "18px" , fontWeight: "500", marginRight: "20px"}}
                         > {content.projectLinkText1} </a>
                         {content.projectLink2 !== "" && (
                             <a
                             href={content.projectLink2}
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ fontSize: "25px", fontWeight: "500" }}
+                            style={{ fontSize: "18px", fontWeight: "500" }}
                             >
                             {content.projectLinkText2}
                             </a>
                         )}
                     </div>
-                    <h2 style={{fontSize: "25px", fontWeight: "400", width: "90%"}}> {content.description}</h2>
+                    <h2 style={{fontSize: "20px", fontWeight: "400", width: "90%"}}> {content.description}</h2>
                     <div>
                         {content.skills.map((text) => (
                            <span className="project-skill"> {text} </span>

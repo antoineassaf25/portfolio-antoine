@@ -168,7 +168,7 @@ button:focus-visible {
   cursor: pointer;
   transition: all 0.2s ease;
 
-  box-shadow: 0 8px 30px rgb(0, 0, 0);
+  box-shadow: 0 0px 20px rgb(0, 0, 0,.5);
 }
 
 .primary-button:hover {
@@ -281,19 +281,20 @@ html {
 
 .about-text{
   max-width: 1000px;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
+  text-align: left;
 }
 
 .about-graphic{
-  width: 600px;
-  height: 600px
+  width: 400px;
+  height: 400px
 }
 
 .project-element{
-  width: 1100px;
-  height: 450px;
+  width: 900px;
+  height: 350px;
 
   background: linear-gradient(
     to right,
@@ -329,18 +330,18 @@ html {
 }
 
 .project-image {
-  width: 400px;
-  height: 250px;
+  width: 300px;
+  height: 200px;
   box-shadow: 0 2px 15px rgb(0, 0, 0, .3);
   border: none;
   border-radius: 40px;
 
   transition: transform 0.3s ease;
-  transform: rotate(1deg);
+  transform: rotate(1deg) translateY(-10%);
 }
 
 .project-element:hover .project-image {
-  transform: scale(1.08) rotate(2deg) ;
+  transform: scale(1.08) rotate(2deg) translateY(-10%);
 }
 
 .project-info {
@@ -353,7 +354,7 @@ html {
 
   text-align: left;
   padding-left: 30px;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .project-skill {
@@ -364,7 +365,7 @@ html {
   box-shadow: 0 8px 30px rgba(0,0,0,0.25);
   color: white;
   border-radius: 9999px;
-  font-size: 20px;
+  font-size: 14px;
 
   display: inline-block;
   padding: 5px 12px;
@@ -396,12 +397,12 @@ html {
   box-shadow: 0 8px 30px rgba(0,0,0,0.25);
 
   color: white;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 500;
 
   border-radius: 20px;
 
-  padding: 12px 30px;
+  padding: 8px 15px;
   transition: transform 0.2s ease;
 }
 
@@ -459,7 +460,7 @@ html {
 .timeline-content p { margin: 0; }
 
 .timeline-content {
-  width: 800px;
+  width: 600px;
 
   background: linear-gradient(
     135deg,
@@ -468,11 +469,11 @@ html {
   );
 
   border: none;
-  border-radius: 40px;
+  border-radius: 20px;
 
   box-shadow: 0 2px 15px rgb(0, 0, 0, .5);
 
-  padding: 40px;
+  padding: 30px;
 
   display: flex;
   justify-content: flex-start;
@@ -495,12 +496,12 @@ html {
 }
 
 .timeline-company {
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 700;
 }
 
 .timeline-title {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 400;
   margin-bottom: 2px;
 }
@@ -526,7 +527,7 @@ html {
   margin: 0;
   padding-left: 22px;
   margin-top: 18px;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.35;
   text-align: left;
 }

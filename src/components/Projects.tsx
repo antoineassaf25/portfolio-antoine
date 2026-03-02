@@ -56,7 +56,7 @@ function Projects() {
 
   return (
     <section id="projects" className="fullscreen-section">
-      <h1>Projects</h1>
+      <h1 className="divider">Projects</h1>
 
       <div>
         {visibleProjects.map((project, index) => (

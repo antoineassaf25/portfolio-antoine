@@ -17,9 +17,9 @@ const SKILLS: string[] = [
 
 export default function() {
     return (<section id="skills" className="fullscreen-section">
-        <h1>Skills</h1>
+        <h1 className="divider">Skills</h1>
         <div style={{
-                    width: "1500px",
+                    width: "1100px",
                     display: "flex",
                     flexWrap: "wrap",
                     gap: "30px",

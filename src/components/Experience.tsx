@@ -3,7 +3,7 @@ import TimelineItem from './TimelineItem.tsx'
 export default function Experience() {
   return (
     <section id="experience" className="fullscreen-section">
-      <h1>Experience</h1>
+      <h1 className="divider">Experience</h1>
 
       <div className="timeline">
         <TimelineItem
