@@ -362,19 +362,11 @@ html {
   transform: scale(1.08) rotate(2deg) translateY(-10%);
 }
 
-.project-info {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column; 
-
-  height: 100%;
-
-  text-align: left;
-  padding-left: 30px;
-  padding-top: 10px;
-  padding-right: 24px;
+.project-info{
+  flex: 1 1 420px;
+  min-width: 0;
 }
+
 
 .project-skill {
   background: rgba(20, 20, 60, 0.5);
@@ -391,11 +383,34 @@ html {
   margin: 6px 8px 6px 0;
 }
 
-.project-row {
+.project-row{
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+@media (max-width: 900px){
+  .project-row{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-image{
+    width: min(420px, 92vw);
+    flex: 0 0 auto;
+  }
+
+  .project-info{
+    width: 92vw;
+    flex: 0 0 auto;
+    padding-left: 0;
+  }
+
+  .project-element:nth-child(even) .project-row{
+    flex-direction: column;
+  }
 }
 
 .project-element:nth-child(even) .project-row {
@@ -678,8 +693,8 @@ html {
     padding-bottom: 18px;
   }
 
-  .project-image {
-    transform: none;
+  .project-image{
+    flex: 0 0 300px;
   }
 
   .project-element:hover .project-image {
