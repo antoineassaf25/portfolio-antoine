@@ -2,12 +2,11 @@ type TimelineItemProps = {
   title: string;
   company: string;
   period: string;
-  description: string;
   achievements: string[];
   imagePath: string;
 };
 
-export default function TimelineItem({ title, company, period, description, achievements, imagePath }: TimelineItemProps) {
+export default function TimelineItem({ title, company, period, achievements, imagePath }: TimelineItemProps) {
   return (
     <div className="timeline-item">
       <div
