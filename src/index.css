@@ -13,6 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .navbar {
   position: fixed;
@@ -44,7 +54,6 @@
   transform: translateX(-50%) scale(1);
 }
 
-/* glass gradient */
 .navbar::before {
   content: "";
   position: absolute;
@@ -63,6 +72,8 @@
 .nav-links {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -79,7 +90,6 @@ a {
 a:hover {
   color: #535bf2;
 }
-
 
 body {
   margin: 0;
@@ -226,6 +236,8 @@ html {
   transform: scale(0.98);
   transition: transform 0.6s ease;
   margin-bottom: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .fullscreen-section:hover{
@@ -256,10 +268,10 @@ html {
   padding: 0 24px;
 
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .home-text{
-
   margin: 0;
   margin-top: 24px;
 
@@ -277,6 +289,7 @@ html {
   max-width: 1500px;
   width: 100%;
   padding: 0 24px;
+  flex-wrap: wrap;
 }
 
 .about-text{
@@ -289,12 +302,14 @@ html {
 
 .about-graphic{
   width: 400px;
-  height: 400px
+  height: 400px;
+  max-width: 90vw;
+  max-height: 90vw;
 }
 
 .project-element{
-  width: 900px;
-  height: 350px;
+  width: min(900px, 92vw);
+  height: auto;
 
   background: linear-gradient(
     to right,
@@ -330,8 +345,11 @@ html {
 }
 
 .project-image {
-  width: 300px;
-  height: 200px;
+  width: min(300px, 86vw);
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+
   box-shadow: 0 2px 15px rgb(0, 0, 0, .3);
   border: none;
   border-radius: 40px;
@@ -355,6 +373,7 @@ html {
   text-align: left;
   padding-left: 30px;
   padding-top: 10px;
+  padding-right: 24px;
 }
 
 .project-skill {
@@ -374,6 +393,9 @@ html {
 
 .project-row {
   display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project-element:nth-child(even) .project-row {
@@ -460,7 +482,7 @@ html {
 .timeline-content p { margin: 0; }
 
 .timeline-content {
-  width: 600px;
+  width: min(600px, 92vw);
 
   background: linear-gradient(
     135deg,
@@ -537,12 +559,6 @@ html {
   line-height: 1.45;
 }
 
-.timeline-marker {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .footer {
   padding: 60px 20px;
   text-align: center;
@@ -611,4 +627,103 @@ html {
   border-radius: 2px;
 
   transform: translateY(30%) scaleY(120%);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    top: 12px;
+    padding: 8px 14px;
+    border-radius: 18px;
+    width: calc(100% - 24px);
+    left: 12px;
+    transform: scale(.98);
+  }
+
+  .navbar:hover {
+    transform: scale(1);
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .home-text {
+    font-size: 18px;
+    max-width: 92vw;
+  }
+
+  .about-text {
+    font-size: 18px;
+    max-width: 92vw;
+    text-align: left;
+  }
+
+  .about-graphic {
+    width: min(320px, 80vw);
+    height: min(320px, 80vw);
+  }
+
+  .project-element {
+    margin-bottom: 50px;
+  }
+
+  .project-info {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .project-image {
+    transform: none;
+  }
+
+  .project-element:hover .project-image {
+    transform: none;
+  }
+
+  .project-element:nth-child(even),
+  .project-element:nth-child(odd) {
+    transform: none;
+  }
+
+  .timeline::before {
+    left: 22px;
+    width: 4px;
+  }
+
+  .timeline-item {
+    padding-left: 0;
+    margin-bottom: 70px;
+  }
+
+  .timeline-marker {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0 0 14px 0;
+    width: 64px;
+    height: 64px;
+    outline-width: 6px;
+  }
+
+  .timeline-content {
+    width: 92vw;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .timeline-company { font-size: 26px; }
+  .timeline-title { font-size: 18px; }
+  .timeline-period { font-size: 16px; margin-bottom: 14px; }
+  .timeline-summary { font-size: 18px; }
+  .timeline-achievements { font-size: 16px; }
+
+  .page-spine {
+    display: none;
+  }
 }

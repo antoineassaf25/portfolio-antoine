@@ -19,7 +19,8 @@ export default function() {
     return (<section id="skills" className="fullscreen-section">
         <h1 className="divider">Skills</h1>
         <div style={{
-                    width: "1100px",
+                    maxWidth: "800px",
+                    width: "100%",
                     display: "flex",
                     flexWrap: "wrap",
                     gap: "30px",
