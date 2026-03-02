@@ -13,7 +13,8 @@ import Footer from './components/Footer.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <NavBar />
-    <main style={{ paddingTop: "100px" }}>
+    <main style={{ paddingTop: "40px" }}>
+      <div className="page-spine"></div>
       <HomeSection/>
       <About/>
       <Projects/>

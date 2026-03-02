@@ -35,7 +35,7 @@
 
   border-radius: 9999px;
 
-  padding: 12px 30px;
+  padding: 8px 20px;
 
   overflow: hidden;
 }
@@ -67,7 +67,7 @@
 
 .nav-links a {
   font-weight: 600;
-  font-size: 26px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -155,8 +155,8 @@ button:focus-visible {
 }
 
 .primary-button {
-  padding: 14px 28px;
-  font-size: 30px;
+  padding: 8px 20px;
+  font-size: 20px;
   font-weight: 400;
 
   background-color: #0f172a;
@@ -177,7 +177,7 @@ button:focus-visible {
 }
 
 .icon-button {
-  height: 65px;
+  height: 50px;
   aspect-ratio: 1 / 1;
   background-color: whitesmoke;
   border: none;
@@ -225,6 +225,7 @@ html {
   padding-top: 60px;
   transform: scale(0.98);
   transition: transform 0.6s ease;
+  margin-bottom: 50px;
 }
 
 .fullscreen-section:hover{
@@ -232,20 +233,16 @@ html {
 }
 
 .headshot {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
-  outline-width: 8px;
+  outline-width: 4px;
   outline-style: solid;
   outline-color: #1a1a1a80;
   box-shadow: 0 8px 30px rgb(0, 0, 0);
-}
 
-.home-title{
-  margin: 0 0 24px 0;
-  font-size: 56px;
-  font-weight: 800;
+  margin-bottom: 20px;
 }
 
 .home-row{
@@ -254,18 +251,20 @@ html {
   justify-content: center;
   gap: 24px;
 
-  max-width: 1000px;
+  max-width: 800px;
   width: 100%;
   padding: 0 24px;
+
+  margin-top: 50px;
 }
 
 .home-text{
-  padding-top: 40px;
-  padding-bottom: 40px;
+
   margin: 0;
-  max-width: 1200px;
-  font-size: 40px;
-  line-height: 1.5;
+  margin-top: 24px;
+
+  max-width: 800px;
+  font-size: 22px;
   font-weight: 500;
 }
 
@@ -580,4 +579,35 @@ html {
 
 .emailLink:hover {
   opacity: 0.7;
+}
+
+.divider {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.page-spine {
+  position: fixed;
+  left: 60px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(112,84,238,0.2),
+    rgba(112,84,238,0.05)
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.vertical-line {
+  display: block;
+  width: 3px;
+  height: 80px;
+  background: #7975f548;
+  margin: 40px auto 0;
+  border-radius: 2px;
+
+  transform: translateY(30%) scaleY(120%);
 }

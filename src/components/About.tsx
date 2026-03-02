@@ -2,7 +2,7 @@ import AboutMeGraphic from "./../assets/aboutme-graphic.png"
 
 function About() { 
     return (<section id="about" className="fullscreen-section">
-        <h1>
+        <h1 className="divider">
             About Me
         </h1>
 
